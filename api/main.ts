@@ -15,7 +15,3 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     console.log('Get request received')
     return res.end('ending response')
 }
-
-export async function hiGeorge(req: VercelRequest, res: VercelResponse) {
-    return new Response('hi please work')
-}
