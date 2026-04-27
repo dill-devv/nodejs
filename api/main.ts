@@ -4,6 +4,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader('Allow-Content-Allow-Methods', 'GET, OPTIONS')
     
     if (req.method === "OPTIONS") {res.status(200)}
-    res.write('Request received')
-    res.end()
+    res.write('Request received', () => {
+        console.log('req received')
+    })
+    res.end('ended response')
 }
