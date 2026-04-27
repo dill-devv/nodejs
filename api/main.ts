@@ -5,8 +5,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     
     if (req.method === "OPTIONS") {return res.status(200)}
 
-    res.write('Request received', () => { // this shows up as response in postman
-        console.log('req received') // this logs in vercel logs
-    })
-    res.end('ended response') // also shows up as response in postman
+    res.write('Request received') // this shows up as response in postman
+    res.end('\nended response') // also shows up as final part of response in postman
 }
