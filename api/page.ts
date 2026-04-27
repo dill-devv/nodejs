@@ -1,6 +1,4 @@
-import {VercelRequest} from '@vercel/node'
-
-export default async function handler(req: VercelRequest) {
+export default async function handler(req: Request) {
     return new Response('<p>dynamic para</p>', {
         headers: {"Content-Type": "text/html"}
     });
