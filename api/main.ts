@@ -1,12 +1,14 @@
 import {VercelRequest, VercelResponse} from '@vercel/node'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
-    
-    if (req.method === "OPTIONS") {return res.status(200).send('Options request received')}
+    res.setHeader('Access-Control-Allow-Origin', "*"); // where you can access source from
+    res.setHeader('Access-Control-Allow-Methods', "GET, OPTIONS"); // allowed methods
+    res.setHeader('Access-Control-Allow-Headers', "Content-Type"); //type of headers allowed
 
-    console.log(`res: ${res}`)
-    console.log(`req: ${req}`)
-    req.setHeader('Content-Type', 'text/plantext')
-    return res.end('Request ended')
+    if (req.method === "OPTIONS") {
+        return status(200)
+    }
+
+    res.write('get request received')
+    return res.end('ending response')
 }
