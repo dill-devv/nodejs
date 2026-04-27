@@ -3,12 +3,12 @@
     "redirects": [
         {
             "source": "/home",
-            "destination": "index.html",
+            "destination": "/",
             "permanent": false
         },
         {
             "source": "/hello",
-            "destination": "hello.html",
+            "destination": "/hello",
             "permanent": false
         }
     ],
