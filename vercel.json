@@ -3,13 +3,7 @@
     "redirects": [
         {
             "source": "/home",
-            "destination": "/",
-            "permanent": false
-        },
-        {
-            "source": "/hello",
-            "destination": "/hello",
-            "permanent": false
+            "destination": "/"
         }
     ],
     "cleanUrls": true
