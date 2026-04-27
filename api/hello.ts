@@ -12,5 +12,5 @@ function page(title: string, content: string) {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-    res.status(200).send(page('hi guys', '<button href="https://www.youtube.com>youtube</button>'));
+    res.status(200).send(page('hi guys', '<button>youtube</button>'));
 }
