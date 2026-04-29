@@ -1,4 +1,5 @@
 let ans = Math.random(1, 100);
+ans = Math.floor(ans);
 console.log(ans);
 let confirm = document.getElementById('confirmGuess');
 let input = document.getElementById('input');
