@@ -1,4 +1,4 @@
-import type {VercelRequest, VercelResponse} from '@vercel/node'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 function page(title: string, content: string) {
     return `
